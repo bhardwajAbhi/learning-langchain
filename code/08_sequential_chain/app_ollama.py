@@ -133,7 +133,7 @@ logs = st.text_area(
     label="Add logs here",
     height=300, 
     placeholder="""
-    Example Android Input Monitoring logs:
+    Sample Logs:
 
     07-01 10:15:25 INPUT_MONITOR_EDITTEXT window=FormLogin view=email text=[john.doe@gmail.com]
 
@@ -169,50 +169,52 @@ if analyze_button:
 
 
 
-'''
-----------------------------------
-Sample Logs for Testing:
-----------------------------------
+with st.expander("View Sample Logs (Copy and paste into the logs input box to test)"):
 
-06-30 14:07:52.982  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/code.ActivityMainMenu | widget=android.widget.LinearLayout | id=? | text=Dialogs | desc=<none>
+    st.code(
+        """
+        06-30 14:07:52.982  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/code.ActivityMainMenu | widget=android.widget.LinearLayout | id=? | text=Dialogs | desc=<none>
 
-06-30 14:07:57.586  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/code.ActivityMainMenu | widget=android.widget.LinearLayout | id=? | text=Term of Services | desc=<none>
+        06-30 14:07:57.586  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/code.ActivityMainMenu | widget=android.widget.LinearLayout | id=? | text=Term of Services | desc=<none>
 
-06-30 14:08:06.899  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.dialog.DialogTermOfServices | widget=androidx.appcompat.widget.AppCompatButton | id=bt_accept | text=Accept | desc=<none>
+        06-30 14:08:06.899  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.dialog.DialogTermOfServices | widget=androidx.appcompat.widget.AppCompatButton | id=bt_accept | text=Accept | desc=<none>
 
-06-30 14:08:17.064  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/code.ActivityMainMenu | widget=android.widget.LinearLayout | id=? | text=GDPR Basic | desc=<none>
+        06-30 14:08:17.064  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/code.ActivityMainMenu | widget=android.widget.LinearLayout | id=? | text=GDPR Basic | desc=<none>
 
-06-30 14:08:22.403  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.dialog.DialogGDPRBasic | widget=androidx.appcompat.widget.AppCompatTextView | id=tv_content | text=By using this App, you agree to the Terms-Conditions, Cookies-Policy and Privacy-Policy and consent to having your personal data transferred and processed outside EU. | desc=<none>
+        06-30 14:08:22.403  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.dialog.DialogGDPRBasic | widget=androidx.appcompat.widget.AppCompatTextView | id=tv_content | text=By using this App, you agree to the Terms-Conditions, Cookies-Policy and Privacy-Policy and consent to having your personal data transferred and processed outside EU. | desc=<none>
 
-06-30 14:08:29.298  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.dialog.DialogGDPRBasic | widget=androidx.appcompat.widget.AppCompatButton | id=bt_accept | text=ACCEPT | desc=<none>
+        06-30 14:08:29.298  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.dialog.DialogGDPRBasic | widget=androidx.appcompat.widget.AppCompatButton | id=bt_accept | text=ACCEPT | desc=<none>
 
-06-30 14:08:58.886  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.form.FormLogin | view=email | hint=Email | inputType=TEXT/EMAIL_ADDRESS | text=[abhi@email.com]
+        06-30 14:08:58.886  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.form.FormLogin | view=email | hint=Email | inputType=TEXT/EMAIL_ADDRESS | text=[abhi@email.com]
 
-06-30 14:09:16.488  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.form.FormLogin | view=password | hint=Password | inputType=TEXT/PASSWORD | text=[Abcd1234]
+        06-30 14:09:16.488  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.form.FormLogin | view=password | hint=Password | inputType=TEXT/PASSWORD | text=[Abcd1234]
 
-06-30 14:09:19.280  9398  9398 D INPUT_MONITOR_COMPOUND_BUTTON: pkg=com.material.components | window=com.material.components/com.screens.activity.form.FormLogin | widget=AppCompatCheckBox | label=Remember me | old_state=UNCHECKED | new_state=CHECKED
+        06-30 14:09:19.280  9398  9398 D INPUT_MONITOR_COMPOUND_BUTTON: pkg=com.material.components | window=com.material.components/com.screens.activity.form.FormLogin | widget=AppCompatCheckBox | label=Remember me | old_state=UNCHECKED | new_state=CHECKED
 
-06-30 14:09:21.553  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.form.FormLogin | widget=androidx.appcompat.widget.AppCompatButton | id=email_sign_in_button | text=LOGIN
+        06-30 14:09:21.553  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.form.FormLogin | widget=androidx.appcompat.widget.AppCompatButton | id=email_sign_in_button | text=LOGIN
 
-06-30 14:09:55.124  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | view=text_content | hint=Write a message... | inputType=TEXT/NORMAL | text=[hello]
+        06-30 14:09:55.124  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | view=text_content | hint=Write a message... | inputType=TEXT/NORMAL | text=[hello]
 
-06-30 14:10:05.452  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | widget=FloatingActionButton | id=btn_send | text=<none>
+        06-30 14:10:05.452  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | widget=FloatingActionButton | id=btn_send | text=<none>
 
-06-30 14:10:17.325  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | view=text_content | hint=Write a message... | inputType=TEXT/NORMAL | text=[how are you]
+        06-30 14:10:17.325  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | view=text_content | hint=Write a message... | inputType=TEXT/NORMAL | text=[how are you]
 
-06-30 14:10:19.046  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | widget=FloatingActionButton | id=btn_send | text=<none>
+        06-30 14:10:19.046  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | widget=FloatingActionButton | id=btn_send | text=<none>
 
-06-30 14:10:40.509  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | view=text_content | hint=Write a message... | inputType=TEXT/NORMAL | text=[I'm good]
+        06-30 14:10:40.509  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | view=text_content | hint=Write a message... | inputType=TEXT/NORMAL | text=[I'm good]
 
-06-30 14:10:42.714  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | widget=FloatingActionButton | id=btn_send | text=<none>
+        06-30 14:10:42.714  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.chat.ChatWhatsapp | widget=FloatingActionButton | id=btn_send | text=<none>
 
-06-30 14:10:57.600  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.payment.PaymentCardDetails | view=et_card_number | hint=Credit Card Number | inputType=NUMBER | text=[123456789874]
+        06-30 14:10:57.600  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.payment.PaymentCardDetails | view=et_card_number | hint=Credit Card Number | inputType=NUMBER | text=[123456789874]
 
-06-30 14:11:04.975  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.payment.PaymentCardDetails | view=et_expire | hint=MMYY | inputType=NUMBER | text=[0866]
+        06-30 14:11:04.975  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.payment.PaymentCardDetails | view=et_expire | hint=MMYY | inputType=NUMBER | text=[0866]
 
-06-30 14:11:08.953  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.payment.PaymentCardDetails | view=et_cvv | hint=CVV | inputType=NUMBER | text=[302]
+        06-30 14:11:08.953  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.payment.PaymentCardDetails | view=et_cvv | hint=CVV | inputType=NUMBER | text=[302]
 
-06-30 14:11:22.104  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.payment.PaymentCardDetails | view=et_name | hint=Name on Card | inputType=TEXT | text=[testName]
+        06-30 14:11:22.104  9398  9398 D INPUT_MONITOR_EDITTEXT: pkg=com.material.components | window=com.material.components/com.screens.activity.payment.PaymentCardDetails | view=et_name | hint=Name on Card | inputType=TEXT | text=[testName]
 
-06-30 14:11:24.655  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.payment.PaymentCardDetails | widget=androidx.appcompat.widget.AppCompatButton | id=btn_continue | text=CONTINUE
-'''
+        06-30 14:11:24.655  9398  9398 D INPUT_MONITOR_CLICK: pkg=com.material.components | window=com.material.components/com.screens.activity.payment.PaymentCardDetails | widget=androidx.appcompat.widget.AppCompatButton | id=btn_continue | text=CONTINUE
+
+        """,
+        language="text",
+    )
