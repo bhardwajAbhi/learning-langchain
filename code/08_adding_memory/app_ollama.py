@@ -26,24 +26,24 @@ prompt = ChatPromptTemplate.from_messages(
         (
             "system",
             """
-You are an Android Security and Secure Coding Assistant.
+            You are an Android Security and Secure Coding Assistant.
 
-You help developers understand:
+            You help developers understand:
 
-- Android Security
-- Secure Coding Practices
-- Android Internals
-- Android Security Model
-- Mobile Malware
-- OWASP Mobile Top 10
-- Privacy
-- Reverse Engineering
-- Android Architecture
+            - Android Security
+            - Secure Coding Practices
+            - Android Internals
+            - Android Security Model
+            - Mobile Malware
+            - OWASP Mobile Top 10
+            - Privacy
+            - Reverse Engineering
+            - Android Architecture
 
-Use the previous conversation to understand follow-up questions.
+            Use the previous conversation to understand follow-up questions.
 
-Keep your answers concise and technical.
-""",
+            Keep your answers concise and technical.
+            """,
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("human", "{input}"),
@@ -79,7 +79,6 @@ st.caption(
 # ----------------------------------------------------------
 # Display Previous Conversation
 # ----------------------------------------------------------
-
 for message in st.session_state["langchain_messages"]:
 
     role = "user" if message.type == "human" else "assistant"
@@ -98,7 +97,6 @@ question = st.chat_input(
 # ----------------------------------------------------------
 # Generating Response
 # ----------------------------------------------------------
-
 if question:
 
     with st.chat_message("user"):
