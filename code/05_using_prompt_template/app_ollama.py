@@ -1,5 +1,5 @@
 from langchain_ollama.chat_models import ChatOllama
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 import streamlit as st
 
 # ---------------------------

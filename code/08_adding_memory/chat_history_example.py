@@ -5,7 +5,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
-from langchain.globals import set_debug
+from langchain_core.globals import set_debug
 import streamlit as st
 
 # ----------------------------------------------------------

@@ -1,7 +1,7 @@
 from langchain_ollama.chat_models import ChatOllama
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from langchain.globals import set_debug
+from langchain_core.globals import set_debug
 
 import streamlit as st
 
